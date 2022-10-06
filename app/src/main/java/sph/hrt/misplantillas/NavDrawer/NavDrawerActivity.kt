@@ -3,6 +3,7 @@ package sph.hrt.misplantillas.NavDrawer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import sph.hrt.misplantillas.R
@@ -16,11 +17,18 @@ class NavDrawerActivity : AppCompatActivity(), INavegation {
         super.onCreate(savedInstanceState)
         binding = ActivityNavDrawerBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
         setSupportActionBar(binding.toolContainer.toolbar2)
+
+
+
         binding.toolContainer.txtTitle.text = "One Fragment"
+
         binding.toolContainer.imgLogo.setOnClickListener {
             binding.root.openDrawer(GravityCompat.START)
         }
+
 
         with(  binding.NavView.menu){
             this.findItem(R.id.item1).setOnMenuItemClickListener {
