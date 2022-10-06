@@ -24,7 +24,6 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,6 +89,29 @@
                 android:layout_weight="1"
                 android:background="@drawable/fondo_buttom"
                 android:text="Tab Activity"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnTabsanty"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/fondo_buttom"
+                android:text="Tab Activity Santy"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btndrawersub"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="60dp"
+                android:background="@drawable/fondo_buttom"
+                android:text="drawer sub Activity"
                 android:textColor="#FFFFFF"
                 android:textSize="24sp" />
 

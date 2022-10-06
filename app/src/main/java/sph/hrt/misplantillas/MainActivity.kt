@@ -5,10 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import sph.hrt.misplantillas.FullScreen.FullActivity
 import sph.hrt.misplantillas.NavDrawer.NavDrawerActivity
+import sph.hrt.misplantillas.NavDrawerSub.NavDrawerSubActivity
 import sph.hrt.misplantillas.basicActivity.BasicActivity
 import sph.hrt.misplantillas.bottomActivity.BottomActivity
 import sph.hrt.misplantillas.databinding.ActivityMainBinding
 import sph.hrt.misplantillas.tabActivity.TabActivity
+import sph.hrt.misplantillas.tabSanti.SantiTabActivity
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -35,6 +37,12 @@ class MainActivity : AppCompatActivity() {
         }
         binding.btnTab.setOnClickListener {
             startActivity(Intent(this, TabActivity::class.java))
+        }
+        binding.btnTabsanty.setOnClickListener{
+            startActivity(Intent(this, SantiTabActivity::class.java))
+        }
+        binding.btndrawersub.setOnClickListener {
+            startActivity(Intent(this, NavDrawerSubActivity  ::class.java))
         }
     }
 }

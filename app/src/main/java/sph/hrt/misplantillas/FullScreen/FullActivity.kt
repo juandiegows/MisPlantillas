@@ -5,6 +5,7 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.view.View
 import androidx.core.view.WindowInsetsCompat
 import sph.hrt.misplantillas.MainActivity
@@ -25,8 +26,7 @@ class FullActivity : AppCompatActivity() {
                     View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                     )
         }
-        Handler().postDelayed({
-
+        Handler(Looper.getMainLooper()).postDelayed({
             startActivity(Intent(this, MainActivity::class.java))
         }, 3000)
     }

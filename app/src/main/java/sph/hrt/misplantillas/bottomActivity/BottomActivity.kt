@@ -14,11 +14,14 @@ class BottomActivity : AppCompatActivity(), INavegation {
         super.onCreate(savedInstanceState)
         binding = inflate(layoutInflater)
         setContentView(binding.root)
+
         supportActionBar?.hide()
         setSupportActionBar(binding.toolbar)
         setTitle("One Fragment")
         supportActionBar?.setDisplayShowHomeEnabled(true)
         supportActionBar?.setIcon((getDrawable(R.drawable.ic_baseline_4k_24)))
+
+
         binding.bottomNavigationView.menu.findItem(R.id.item1).setOnMenuItemClickListener {
            findNavigation(OneFragment.newInstance(),"One Fragment")
             it.isChecked = true
@@ -40,9 +43,9 @@ class BottomActivity : AppCompatActivity(), INavegation {
 
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragmentContainerView2, fragment)
-            .setReorderingAllowed(true)
+            .addToBackStack(null)
             .commit()
-        setTitle("$title")
+        supportFragmentManager.popBackStack()
         supportActionBar?.setDisplayShowHomeEnabled(true)
         supportActionBar?.setIcon((getDrawable(R.drawable.ic_baseline_4k_24)))
     }
