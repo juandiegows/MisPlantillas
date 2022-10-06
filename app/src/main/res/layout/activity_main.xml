@@ -82,7 +82,17 @@
                 android:textColor="#FFFFFF"
                 android:textSize="24sp" />
 
-            
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnTab"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/fondo_buttom"
+                android:text="Tab Activity"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
 
         </LinearLayout>
     </ScrollView>
