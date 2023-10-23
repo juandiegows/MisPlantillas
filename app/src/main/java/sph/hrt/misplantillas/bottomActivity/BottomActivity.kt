@@ -25,12 +25,12 @@ class BottomActivity : AppCompatActivity(), INavegation {
         binding.bottomNavigationView.menu.findItem(R.id.item1).setOnMenuItemClickListener {
            findNavigation(OneFragment.newInstance(),"One Fragment")
             it.isChecked = true
-            return@setOnMenuItemClickListener true
+            return@setOnMenuItemClickListener false
         }
         binding.bottomNavigationView.menu.findItem(R.id.item2).setOnMenuItemClickListener {
             findNavigation(TwoFragment.newInstance(),"Two Fragment")
             it.isChecked = true
-            return@setOnMenuItemClickListener true
+            return@setOnMenuItemClickListener false
         }
         binding.bottomNavigationView.menu.findItem(R.id.item3).setOnMenuItemClickListener {
             findNavigation(ThreeFragment.newInstance(),"Three Fragment")
@@ -45,7 +45,8 @@ class BottomActivity : AppCompatActivity(), INavegation {
             .replace(R.id.fragmentContainerView2, fragment)
             .addToBackStack(null)
             .commit()
-        supportFragmentManager.popBackStack()
+        //esta codigo es para volver atras, lo comento para que me deja pasar
+      //  supportFragmentManager.popBackStack()
         supportActionBar?.setDisplayShowHomeEnabled(true)
         supportActionBar?.setIcon((getDrawable(R.drawable.ic_baseline_4k_24)))
     }
